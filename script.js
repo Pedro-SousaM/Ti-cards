@@ -60,7 +60,11 @@ splitChars.forEach((char) => {
             scrub: true,
         },
         opacity: 0,
-        stagger: 0.1,
+        stagger:  {
+            grid: [7,15],
+            from: "edges",
+            amount: 1.5
+          },
         y: 40,
         rotationZ: 13
     })
@@ -68,7 +72,7 @@ splitChars.forEach((char) => {
 const splitChars2 = document.querySelectorAll(".reveal-2")
 splitChars2.forEach((char) => {
     const text = new SplitType(char, { types: 'words,chars' })
-    gsap.from(text.chars, {
+    gsap.to(text.chars, {
         scrollTrigger: {
             trigger: char,
             start: "+="+1900,
@@ -76,7 +80,11 @@ splitChars2.forEach((char) => {
             scrub: true,
         },
         opacity: 0.5,
-        stagger: 0.1,
+        stagger:  {
+            grid: [7,15],
+            from: "random",
+            amount: 1.5
+          },
         color:"#505cfd",  
         textShadow:"6px 6px 0 #000", 
         y:-6, 

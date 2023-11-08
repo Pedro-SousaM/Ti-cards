@@ -131,7 +131,7 @@ a {
   margin-top: 148vh;   
   position: absolute; 
   left: 0; 
-  font-size: 10vh; 
+  font-size: 98px; 
   overflow-x: hidden;
 } 
  .strong-blue{
@@ -240,7 +240,7 @@ a {
 .spnC{ 
   position: absolute;
   margin-top: 588px; 
-  left: 3990px; 
+  left: 4050px; 
   background-color: rgb(38, 136, 255); 
   box-shadow: inset 0px 0px 190px -20px white; 
   border-radius: 10px; 
