@@ -354,14 +354,15 @@ spnCtl.from(".spnC", {
         transformOrigin:"bottom left", 
         stagger:.2, 
         ease:"elastic.out"
-    }) 
+    },0)
+    .fromTo("html",{"--myOpacity": 1}, {"--myOpacity": 0, duration: 0.8},1)
     .to('.transition li',{
         duration: 1, 
-        scaleY:0, 
+        scaleY:0,  
         transformOrigin:"top top",  
         stagger:.2 ,
         delay: .3,
-    })
+    },1)
 }
 
 
@@ -396,7 +397,6 @@ barba.init({
             });
             console.log("uma");
             const done = this.async();
-            pageTransition();
             await delay(1000);
             initGsap();
             done();
