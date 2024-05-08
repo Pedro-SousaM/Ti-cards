@@ -1,57 +1,63 @@
 html {
   --myOpacity: 1;
+
 }
+
 * {
   padding: 0;
   margin: 0;
+
 }
 
 body {
   background-color: #ffffff;
-  display: flex;
   align-items: center;
-  flex-direction: column;
   height: 10000px;
-  width: 1900px;
-  overflow-x: hidden;
-}
-ul{
-  list-style-type: none; 
-  display: flex;  
+  width: 99.5vw;
 
-  position: fixed;  
-  z-index: 10; 
-  height: 100vh; 
-  width: 100%; 
-  top: 0; 
-  left: 0; 
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
   pointer-events: none;
-}  
-.transition-column{
-  display: flex; 
-  width: 100%; 
+}
+
+.transition-column {
+  display: flex;
+  width: 100%;
   height: 25vh;
 }
-li{
-  transform: scaleY(0);  
-  background-color: rgb(76, 86, 251); 
-  width: 33.34%; 
-  height: 100%; 
+
+li {
+  transform: scaleY(0);
+  background-color: rgb(76, 86, 251);
+  width: 33.34%;
+  height: 100%;
   opacity: 0;
-} 
-.li-center::after{  
+}
+
+.li-center::after {
   content: '';
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%;  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   opacity: var(--myOpacity);
   height: 100%;
-  background-image: url(./assets/image/1699042543301.png); 
-  background-size:400px 300px; 
-  background-repeat:no-repeat;  
+  background-image: url(./assets/image/1699042543301.png);
+  background-size: 400px 300px;
+  background-repeat: no-repeat;
   background-position: 50%;
- }
+}
+
 .scroll {
   display: flex;
   width: 40vw;
@@ -95,7 +101,7 @@ a {
   background-color: transparent;
   display: flex;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   z-index: 4;
   transition: 0.2s;
@@ -165,6 +171,7 @@ a {
   align-items: center;
   justify-content: center;
   margin-top: 15.3vh;
+  overflow: hidden;
 }
 
 .scroll-animator-box {
@@ -172,7 +179,9 @@ a {
   position: absolute;
   left: 0;
   font-size: 95px;
-  width: 5700px;
+  width: 99vw;
+  height: 605%;
+  overflow-x: hidden;
 }
 
 .strong-blue {
@@ -185,7 +194,7 @@ a {
 
 .boxes {
   height: 100vh;
-  width: 7000px;
+  width: 5700px;
   display: flex;
   align-items: center;
   font-family: 'montserrat';
@@ -366,54 +375,154 @@ a {
 
 .after-scroll {
   height: 100vh;
-  width: 100vw;
-  left: 100px;
+  width: 99vw;
+  left: 0px;
   position: absolute;
-  top: 6180px;  
+  top: 6280px;
   font-family: 'montserrat';
-  font-weight: 500; 
+  font-weight: 500;
   font-size: 70px;
+  overflow-x: hidden;
 }
-.after-scroll .text {
-  width: 600px;  
-  margin-left: 150px;
-  height: 700px; 
+
+.Products {
+  height: 140vh;
+  width: 99.5vw;
+  position: absolute;
+  left: 0;
+  top: 7300px;
+  display: flex;
+}
+
+.quadradoteste {
+  width: 330px;
+  height: 300px;
+  position: relative;
+  border-radius: 20px;
+  color: rgb(28, 1, 229);
+  font-family: 'montserrat';
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.7s;
+  background: rgba(113, 184, 238, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(41, 51, 183, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+}
+
+.card-image {
+  width: 300px;
+  height: 220px;
+  background-color: #404044;
+  border-radius: 20px;
+  position: absolute;
+  top: 20px;
+  transition: 0.7s;
+  overflow: hidden;
+}
+.card-desc{
+  width: 100%;
+  height: 100%;
   position: absolute; 
-  top: 80px; 
-  color: #404044; 
-  font-size: 30px; 
+  top: 250px; 
+  padding: 0 30px; 
+  text-align: center;  
+  height: 30px; 
+  overflow: hidden; 
+  transition: 0.5s;
+} 
+.card-desc h3{
+  margin: 5px;
+} 
+.card-desc a{
+  border: 2px rgb(28, 1, 229) solid; 
+  color: rgb(28, 1, 229); 
+  padding: 10px; 
+  position: relative; 
+  top: 20px; 
+  border-radius: 40px;
+} 
+.card-desc a:hover{
+  background-color: rgb(28, 1, 229); 
+  color: white;
+}
+.card-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.quadradoteste:hover {
+  height: 400px;
+}
+
+.quadradoteste:hover .card-image {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 8px 32px 0 rgba(41, 51, 183, 0.37);
+}
+.quadradoteste:hover .card-desc{
+  height: 250px; 
+  top: 120px;
+}
+.cards-box,.desc-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-box {
+  width: 30%;
+  height: 100%;
+  align-items: center;
+}
+
+.desc-box {
+  width: 70%;
+  height: 100%;
   
 }
-.BigChoices{
-  padding: 10px; 
-  border-radius: 10px; 
-  width: 8em; 
-  height: 2em; 
-  margin: 30px; 
+
+.after-scroll .text {
+  width: 600px;
+  margin-left: 150px;
+  height: 700px;
+  position: absolute;
+  top: 80px;
+  color: #404044;
+  font-size: 30px;
+
+}
+
+.BigChoices {
+  padding: 10px;
+  border-radius: 10px;
+  width: 8em;
+  height: 2em;
+  margin: 30px;
   font-weight: 700;
-  display: flex;  
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
-  position: relative; 
-  left: 960px; 
+  justify-content: center;
+  position: relative;
+  left: 960px;
   color: rgb(56, 152, 255);
-} 
- .choices{
-  display: inline;
-  margin: 0; 
-  left: 0;
-  position: relative; 
-  color: rgb(56, 152, 255); 
-} 
-.Products{
-  height: 100vh; 
-  width: 100vw; 
-  background-color: greenyellow; 
-  position: absolute; 
-  left: 0; 
-  top: 7100px;
 }
+
+.choices {
+  display: inline;
+  margin: 0;
+  left: 0;
+  position: relative;
+  color: rgb(56, 152, 255);
+}
+
 .side-image {
   height: 60vh;
   position: absolute;
@@ -480,7 +589,7 @@ hr {
 }
 
 .Bimage {
-  width: 100vw;
+  width: 99.5vw;
   position: absolute;
   height: 77.4%;
   top: 0;

@@ -13,18 +13,19 @@ function parallax(e) {
 }
 gsap.registerPlugin(ScrollTrigger);
 
-const animatedScroll = document.querySelector(".scroll-animator-box")
+const animatedScroll = document.querySelector(".boxes")
 let scrollWidth = animatedScroll.offsetWidth
 let scrolltotal = scrollWidth - window.innerWidth
+const after = document.querySelector(".after-scroll") 
 
 let scrollTimeline = gsap.timeline({
     scrollTrigger: {
-        trigger: ".scroll-animator-box",
+        trigger: ".boxes",
         start: "top -13%",
         end: "+=" + scrolltotal * 1,
         pin: true,
         scrub: 1,
-
+        markers:true
     }
 })
 scrollTimeline
@@ -35,8 +36,8 @@ scrollTimeline
     })
 let pointerTl = gsap.timeline({
     scrollTrigger: {
-        trigger: ".boxes",
-        start: "+=" + 200,
+        trigger: ".scroll-box-animator",
+        start: "+="+1400,
         end: "+=" + 800,
         scrub: true,
         markers: false,
